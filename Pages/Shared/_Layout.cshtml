@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Semantic Override</title>
+	<link rel="stylesheet" href="~/css/main.css" />
+</head>
+
+<body>
+	<header>
+		<a asp-area="" asp-page="/Index">ꜱᴇᴍᴀɴᴛɪᴄ ᴏᴠᴇʀʀɪᴅᴇ ɴᴇᴛᴡᴏʀᴋ</a>
+	</header>
+
+	<nav>
+		<a asp-area="" asp-page="/Index">Home</a>
+		<span> - </span>
+		<a asp-area="" asp-page="/Privacy">Privacy</a>
+	</nav>
+
+	<main role="main">
+		@RenderBody()
+	</main>
+
+	<footer class="border-top footer text-muted">
+		<div class="container">
+			SemanticOverrideNetwork - <a asp-area="" asp-page="/Privacy">Privacy</a> - <a href="https://discord.gg/yJnz3pv">Discord</a>
+		</div>
+	</footer>
+
+	<script src="~/js/main.js" asp-append-version="true"></script>
+
+	@RenderSection("Scripts", required: false)
+</body>
+
+</html>
