@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Actor Template</title>
+</head>
+
+<body>
+	<div>
+		<h1>Explanation of this page</h1>
+		<p>This page is generated using <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template">HTML template</a></p>
+		<p>Each chapter is stuck in a <code>div#id</code> and to that div, the data is dynamically added, via previously mentioned <code>template</code>, with a bit of <code>Javascript</code> sprinkled in.</p>
+	</div>
+	<div id="actors">
+		<h1 id="title">ACTOR TEMPLATE</h1>
+
+		<template id=actor_template>
+			<table>
+				<tr>
+					<td class="description">
+						<abbr title="Rolename of the actor as named in the Use Case Diagram">
+							Role name
+						</abbr>
+					</td>
+					<td class="role_name">[ROLE NAME GOES HERE]</td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="In general the role of the actor falls outside of the tasks of a function. A function can contain multiple roles.">
+							Function name
+						</abbr>
+					</td>
+					<td class="function_name">[FUNCTION NAME GOES HERE]</td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="Often, analysts that create the Use Cases are not familiar with the roles of the actors. By giving a short description of the role, one can give themselves a better idea of the role and to perhaps uncover Use Cases people have overlooked so far. This description describes what the role does with the esystem and thus does not sum up the Use Cases that are assigned to the role.">
+							Role description
+						</abbr>
+					</td>
+					<td class="role_description">[ROLE DESCRIPTION GOES HERE]</td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="Names of people within the organization that are attached to this role. This list with names can come in handy when creating the Use Case Templates. They *are* the experts of the role, who can tell exactly how a Use Case should go and which attributes could play a role and why.">
+							Exercisers
+						</abbr>
+					</td>
+					<td class="excercisers">[EXECUTORS GOES HERE]</td>
+				</tr>
+			</table>
+			<hr>
+		</template>
+
+		<script>
+			const actors_data = [
+				{
+					role_name: "User",
+					function_name: "post creator",
+					role_description: "This role creates content and reacts to content created by others",
+					excercisers: "Executors goes here?"
+				},
+				{
+					role_name: "Admin",
+					function_name: "Site Administrator",
+					role_description: "Administrates posts that go outside of the set boundaries",
+					excercisers: "Executors goes here?"
+				}
+			];
+
+			let actors = document.querySelector("div#actors");
+			let actor_template = document.querySelector('#actor_template');
+
+			for (let i = 0; i < actors_data.length; i++) {
+				const element = actors_data[i];
+
+				// Clone the new row and insert it into the table
+				let clone = actor_template.content.cloneNode(true);
+				clone.querySelector(".role_name").textContent = element.role_name;
+				clone.querySelector(".function_name").textContent = element.function_name;
+				clone.querySelector(".role_description").textContent = element.role_description;
+				clone.querySelector(".excercisers").textContent = element.excercisers;
+				actors.appendChild(clone);
+			}
+		</script>
+	</div>
+
+	<div id="use_cases">
+		<h1 id="title">USE CASE TEMPLATE</h1>
+		<template id="use_case_template">
+			<table>
+				<tr>
+					<td class="description">
+						<abbr title="Use the UC-nnn style within ALL documents for reference">
+							ID
+						</abbr>
+					</td>
+					<td class="id"></td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="Name of the Use Case">
+							Name
+						</abbr>
+					</td>
+					<td class="name"></td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="For version control. Range: 0.01-1.00">
+							Version #
+						</abbr>
+					</td>
+					<td class="version"></td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="Name of the UC's creator">
+							Author
+						</abbr>
+					</td>
+					<td class="author"></td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="What role does the person/system fulfil, which the Main Scenario should follow?">
+							Actor
+						</abbr>
+					</td>
+					<td class="actor"></td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="What entails this UC? What should the Actor do? What should the System do? Put (o) for output or (i) for input with each noun (word that identifies objects) where I/O should happen. This Summary only describes the happy flow!">
+							Summary
+						</abbr>
+					</td>
+					<td class="summary"></td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="Must haves, Should haves, Could haves or Won't haves (or Would haves, alternatively, as they could be interesting for the future!)">
+							Priority
+						</abbr>
+					</td>
+					<td class="priority"></td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="What should be the case (other than 'the system must work' or 'the actor must be logged in' (if these preconditions are not the case, the actor wouldn't be able to access the Use Case in the first place)">
+							Pre Condition
+						</abbr>
+					</td>
+					<td class="pre_condition"></td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="Usually in the style of: 1. System asks for..., 2. Actor provides..., 3. System shows..., 4. Actor provides..., 5. System registers...">
+							Main Scenario (MS)
+						</abbr>
+					</td>
+					<td class="main_scenario"></td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="What's the case after the Main Scenario has successfully wrapped up? Has something been registered? Is the system unchanged?">
+							Post Condition (A0)
+						</abbr>
+					</td>
+					<td class="post_condition"></td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="What happens if step n fails? Which steps should be taken to get back to the Main Scenario? Alternatively, the user can be sent to another Alternative Scenario.">
+							Alternative Scenario (A1)
+						</abbr>
+					</td>
+					<td class="alternative_scenario">
+						<table>
+							<tr>
+								<td>Trigger:</td>
+								<td>After MS2: [ALTERNATIVE SCENARIO]</td>
+							</tr>
+							<tr>
+								<td>Steps:</td>
+								<td>
+									<ol>
+										<li>Step 1</li>
+										<li>Step 2</li>
+										<li>Use Case continues after MS2</li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="Try to create at least two Alternative Scenarios, to prevent yourself from making it too easy.">
+							Alternative Scenario (A2)
+						</abbr>
+					</td>
+					<td class="alternative_scenario">
+						<ol>
+							<li>Step 1</li>
+							<li>Step 2</li>
+							<li>Use Case continues after MS2</li>
+						</ol>
+					</td>
+				</tr>
+				<tr>
+					<td class="description">
+						<abbr title="What is the system's condition after the Use Case as been ended via an Alternative Scenario? Has the system been left unchanged? Has something been removed? Added?">
+							Post Condition
+						</abbr>
+					</td>
+					<td class="post_condition">[SOME ALTERNATIVE CONDITION WITHIN THE SYSTEM</td>
+				</tr>
+			</table>
+		</template>
+		<script>
+			const use_case_data = [
+				{
+					id: "UC-001",
+					name: "use case name",
+					version: "use case version",
+					author: "use case author",
+					actor: "me",
+					summary: "example use case",
+					priority: "M (MoSCoW)",
+					pre_condition: [
+						"step 1",
+						[
+							"substep 1",
+							"substep 2",
+						]
+					],
+					main_scenario: [
+						"step 1",
+						[
+							"substep 1",
+							"substep 2",
+						]
+					],
+					post_condition: "[end of happy flow]",
+					scenarios: [
+						{
+							name: "Alternative Scenario",
+							abbreviation: "A1",
+							steps: {
+								trigger: "after MS2",
+								steps: [
+									"step 1",
+									"step 2",
+									"Use Case continues after MS2",
+								]
+							}
+						},
+						{
+							name: "Alternative Scenario",
+							abbreviation: "A2",
+							steps: [
+								"step 1",
+								"step 2",
+								"Use Case continues after MS2",
+							]
+						},
+						{
+							name: "Post Condition",
+							abbreviation: "",
+							steps: [
+								"[some alternative condition within the system]",
+							]
+						},
+					],
+				}
+			];
+
+			const generate_list = (recursive_list, result) => {
+				// fuck me...
+				if (typeof recursive_list[0] === "string") {
+					const li = document.createElement("li");
+					const text = document.createTextNode(recursive_list[0]);
+					li.appendChild(text)
+					result.appendChild(li);
+				}
+				if (typeof recursive_list[0] === "object") {
+					let ol = document.createElement("ol")
+					ol.appendChild(generate_list(recursive_list[0], result));
+					result.append(ol);
+				}
+				if(recursive_list.length === 0) return result;
+				let tail = recursive_list.slice(1);
+				return generate_list(tail, result);
+			};
+
+			let use_cases = document.querySelector("div#use_cases");
+			let use_case_template = document.querySelector('#use_case_template');
+
+			for (let i = 0; i < use_case_data.length; i++) {
+				const element = use_case_data[i];
+
+				// Clone the new row and insert it into the table
+				let clone = use_case_template.content.cloneNode(true);
+				clone.querySelector(".id").textContent = element.id;
+				clone.querySelector(".name").textContent = element.name;
+				clone.querySelector(".version").textContent = element.version;
+				clone.querySelector(".author").textContent = element.author;
+				clone.querySelector(".actor").textContent = element.actor;
+				clone.querySelector(".summary").textContent = element.summary;
+				clone.querySelector(".priority").textContent = element.priority;
+				const selected = clone.querySelector(".pre_condition");
+				const list = generate_list(element.pre_condition, document.createElement("ol"));
+				selected.appendChild(list);
+				for (let j = 0; j < element.main_scenario.length; j++) {
+					const subelement = element.main_scenario[j];
+					clone
+						.querySelector(".main_scenario")
+						.appendChild(
+							generate_list(subelement)
+						);
+				}
+				clone.querySelector(".post_condition").textContent = element.post_condition;
+
+				// clone.querySelector(".scenarios") = element.scenarios;
+				// for (let j = 0; j < element.scenarios.length; j++) {
+				// 	const subelement = element.scenarios[j];
+				// 	// Clone the new row and insert it into the table
+				// 	clone.querySelector(".role_name").textContent = subelement.role_name;
+				// 	clone.querySelector(".function_name").textContent = subelement.function_name;
+				// 	clone.querySelector(".role_description").textContent = subelement.role_description;
+				// 	clone.querySelector(".excercisers").textContent = subelement.excercisers;
+				// 	actors.appendChild(clone);
+				// }
+				use_cases.appendChild(clone);
+			}
+		</script>
+	</div>
+
+	<div id="use_case_summaries">
+		<h1 id="title">USE CASE SUMMARIES</h1>
+		<table>
+			<tr>
+				<td class="description" style="font-weight: bold" title="">UC-#</td>
+				<td class="description" style="font-weight: bold" title="">Use Case</td>
+				<td class="description" style="font-weight: bold">Summary</td>
+			</tr>
+			<tr>
+				<td class="data">UC-001</td>
+				<td class="data">The first one</td>
+				<td class="data">Indeed, it is the first Use case that I've made! Wowee!</td>
+			</tr>
+			<tr>
+				<td class="data">4</td>
+				<td class="data">5</td>
+				<td class="data">6</td>
+			</tr>
+			<tr>
+				<td class="data">7</td>
+				<td class="data">8</td>
+				<td class="data">9</td>
+			</tr>
+			<tr>
+				<td class="data">10</td>
+				<td class="data">11</td>
+				<td class="data">12</td>
+			</tr>
+			<tr>
+				<td class="data">13</td>
+				<td class="data">14</td>
+				<td class="data">15</td>
+			</tr>
+			<tr>
+				<td class="data">16</td>
+				<td class="data">17</td>
+				<td class="data">18</td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+</html>
