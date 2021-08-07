@@ -14,4 +14,3 @@ git config --global log.date rfc
 # you can't override "git log"
 git config --global alias.log "log --graph --decorate --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset %C(bold blue)%an %Cgreen%ad %Creset%C(auto)%d%Creset %s %Creset' --abbrev-commit"
 # see also https://git-scm.com/docs/pretty-formats
-
