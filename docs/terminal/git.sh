@@ -4,7 +4,7 @@
 git config --list
 
 # == fix line endings ==
-# only for windows users
+# mostly for windows users; local files end in crlf, but converts to lf in the repo
 git config --global core.autocrlf true
 
 # == set general log date to rfc ==
