@@ -12,6 +12,7 @@
 
 # files
 !.dockerignore
+!.editorconfig
 !.gitattributes
 !.gitignore
 !Dockerfile
