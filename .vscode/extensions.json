@@ -1,14 +1,15 @@
 {
 	"recommendations": [
 		"aaron-bond.better-comments",
-		"coenraads.bracket-pair-colorizer",
 		"aeschli.vscode-css-formatter",
+		"coenraads.bracket-pair-colorizer",
 		"eamodio.gitlens",
+		"esbenp.prettier-vscode",
+		"kisstkondoros.vscode-codemetrics",
+		"ms-dotnettools.csharp",
 		"oderwat.indent-rainbow",
-		"zignd.html-css-class-completion",
 		"tabnine.tabnine-vscode",
 		"vscode-icons-team.vscode-icons",
-		"kisstkondoros.vscode-codemetrics",
-		"ms-dotnettools.csharp"
+		"zignd.html-css-class-completion"
 	]
 }
