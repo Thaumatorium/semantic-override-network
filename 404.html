@@ -2,10 +2,10 @@
 <html lang=en-GB>
 
 <head>
-	<meta charset=utf-8>
-	<title>Semantic Override Network | SON</title>
-	<meta name=description content="Your personal news accumulator/aggregator/array/assembler/batch/bunch/bundle/chunk/cluster/collector/hunk/pack/set/etc">
-	<link rel=canonical href=https://semanticoverride.net/>
+	<meta charset=utf-8 />
+	<title>404 Not Found | Semantic Override Network | </title>
+	<meta name=description content="Archival & Search available so you can find what you need" />
+	<link rel=canonical href=https://semanticoverride.net/404>
 	<meta name=theme-color content=#800 />
 	<!-- <link rel=apple-touch-icon href=/imgs/icons-192.png> -->
 	<meta name=viewport content="width=device-width, initial-scale=1">
@@ -28,8 +28,22 @@
 	</nav>
 
 	<main>
-		<h1>Welcome!</h1>
+		<h1>404 Not Found</h1>
+		<p>You have gone somewhere, where you are not supposed to be! That or I removed the page. Most likely it is my fault.</p>
+		<p>To find what you were looking for, you can give the WaybackMachine a try: <a id=archive></a></p>
+		<p>Or search the site with Google</p>
+		<!-- created via https://cse.google.com/cse/all -->
+		<script async src="https://cse.google.com/cse.js?cx=007273406661708460536:ir7f8zjh3fd"></script>
+		<div class="gcse-search"></div>
+		<script>
+			// set archive link dynamically
+			const target = `https://web.archive.org/${window.location.href}`
+			let archiveLink = document.getElementById("archive");
+			archiveLink.href = target;
+			archiveLink.innerHTML = target;
+		</script>
 	</main>
+
 	<footer>
 		<div class=copyright>
 			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12022</a>

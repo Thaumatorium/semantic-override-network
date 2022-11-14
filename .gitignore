@@ -1,22 +1,26 @@
-# TODO check this list - it's probably too big
-# https://stackoverflow.com/a/29932318/12210524
-# * works recursively. Use /* instead
+# docs: https://stackoverflow.com/a/29932318/12210524
+
+# ignore root items
 /*
 
-# files
+# unignore root files
 !.editorconfig
 !.gitattributes
 !.gitignore
+!404.html
 !CNAME
 !index.html
 !LICENSE
+!manifest.json
 !README.md
 
-# folders
+# unignore root folders
 !.vscode
-!cmd
-!docs
-!css
-!images
 !about
-!js
+!cmd
+!code
+!docs
+!imgs
+!praetorianpi
+!styles
+!wiki
