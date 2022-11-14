@@ -21,6 +21,7 @@
 
 # folders
 !.vscode
+!cmd
 !docs
 !scripts
 !src
