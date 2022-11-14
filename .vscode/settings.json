@@ -2,5 +2,6 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": false,
   "editor.detectIndentation": false,
-  "prettier.trailingComma": "all",
+	"editor.wordWrap": "bounded",
+	"files.insertFinalNewline": true,
 }
