@@ -2,13 +2,8 @@
 	"recommendations": [
 		"aaron-bond.better-comments",
 		"aeschli.vscode-css-formatter",
-		"coenraads.bracket-pair-colorizer",
-		"eamodio.gitlens",
 		"esbenp.prettier-vscode",
-		"kisstkondoros.vscode-codemetrics",
-		"ms-dotnettools.csharp",
 		"oderwat.indent-rainbow",
-		"tabnine.tabnine-vscode",
 		"vscode-icons-team.vscode-icons",
 		"zignd.html-css-class-completion"
 	]
