@@ -3,32 +3,20 @@
 # * works recursively. Use /* instead
 /*
 
-# filetypes
-!/*.ini
-!/*.lock
-!/*.md
-!/*.toml
-!/*.yml
-
 # files
-!.dockerignore
 !.editorconfig
 !.gitattributes
 !.gitignore
-!Dockerfile
-!Pipfile
-!.python-version
+!CNAME
+!index.html
+!LICENSE
+!README.md
 
 # folders
 !.vscode
 !cmd
 !docs
-!scripts
-!src
-!tests
-
-# __pycache__ generated on its own after running
-# you COULD control it with PYTHONPYCACHEPREFIX
-# https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPYCACHEPREFIX
-# but I can't be arsed.
-__pycache__
+!css
+!images
+!about
+!js
