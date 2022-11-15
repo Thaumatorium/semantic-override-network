@@ -7,4 +7,4 @@ updated: 2022-11-15
 Todo items go here:
 
 * re-enable `<head>` child-tags
-* write down more [[wiki]] notes
+* write down more [[a1]] notes
