@@ -15,6 +15,7 @@
 !README.md
 
 # unignore root folders
+!.foam
 !.vscode
 !about
 !cmd
