@@ -8,3 +8,4 @@ Todo items go here:
 
 * re-enable `<head>` child-tags
 * write down more [[a1]] notes
+* setup the digital zettelkasten in `wiki/`
