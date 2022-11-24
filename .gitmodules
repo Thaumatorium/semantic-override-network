@@ -1,9 +1,0 @@
-[submodule "src/themes/ananke"]
-	path = src/themes/ananke
-	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
-[submodule "src/themes/arcana"]
-	path = src/themes/arcana
-	url = https://github.com/half-duplex/hugo-arcana
-[submodule "src/themes/docsy"]
-	path = src/themes/docsy
-	url = https://github.com/google/docsy
