@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Semantic Override Network | SON</title>
+		<link>http://semanticoverride.net/</link>
+		<description>Recent content on Semantic Override Network | SON</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<lastBuildDate>Sun, 20 Nov 2022 16:49:10 +0100</lastBuildDate>
+		<atom:link href="http://semanticoverride.net/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>About</title>
+			<link>http://semanticoverride.net/about/</link>
+			<pubDate>Sun, 20 Nov 2022 18:11:19 +0100</pubDate>
+
+			<guid>http://semanticoverride.net/about/</guid>
+			<description> 1 2 3 4 1 2 3 4 1 2 3 4 1 2 3 4 1 2 3 4 1 \ 2 3 4 sequenceDiagram
+participant Alice
+participant Bob
+Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+loop Healthcheck
+John-&amp;gt;&amp;gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts &amp;lt;br/&amp;gt;prevail!
+John--&amp;gt;&amp;gt;Alice: Great!
+John-&amp;gt;&amp;gt;Bob: How about you?
+Bob--&amp;gt;&amp;gt;John: Jolly good! </description>
+		</item>
+
+		<item>
+			<title>My First Post</title>
+			<link>http://semanticoverride.net/posts/my-first-post/</link>
+			<pubDate>Sun, 20 Nov 2022 16:49:10 +0100</pubDate>
+
+			<guid>http://semanticoverride.net/posts/my-first-post/</guid>
+			<description></description>
+		</item>
+
+	</channel>
+</rss>

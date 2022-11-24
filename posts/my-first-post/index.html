@@ -1,0 +1,26 @@
+<header>
+	<div class=title>Semantic Override network</div>
+	<div class=subtitle>Where the <em>other</em> magic happens</div>
+</header>
+<nav>
+	<h5 style="display: none;">Main nav menu</h5>
+	<a href="/">Frontpage</a><span> - </span>
+	<a href=/about>About</a>
+</nav>
+<h1>My First Post</h1>
+<footer>
+	<div class=copyright>
+		©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12022</a>
+		– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">12022</a>,
+		<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+		<p><sub>Last updated: <time id=updated></time></sub></p>
+	</div>
+	<nav id=profiles>
+	</nav>
+	<a class=secret onclick=specialGoto(event)>π</a>
+	<script>
+		const specialGoto = event => {
+			if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+		}
+	</script>
+</footer>

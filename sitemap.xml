@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<url>
+		<loc>http://semanticoverride.net/about/</loc>
+		<lastmod>2022-11-20T18:11:19+01:00</lastmod>
+	</url>
+	<url>
+		<loc>http://semanticoverride.net/posts/my-first-post/</loc>
+		<lastmod>2022-11-20T16:49:10+01:00</lastmod>
+	</url>
+	<url>
+		<loc>http://semanticoverride.net/posts/</loc>
+		<lastmod>2022-11-20T16:49:10+01:00</lastmod>
+	</url>
+	<url>
+		<loc>http://semanticoverride.net/</loc>
+		<lastmod>2022-11-20T16:49:10+01:00</lastmod>
+	</url>
+	<url>
+		<loc>http://semanticoverride.net/nostradavid/</loc>
+	</url>
+</urlset>
