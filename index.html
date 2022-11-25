@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-
 <head prefix="og: http://ogp.me/ns#">
 	<meta charset=utf-8>
-	<title>Semantic Override Network | SON | SON</title>
+	<title>Semantic Override Network | SON</title>
 	<meta name=description content="Your personal news accumulator/aggregator/array/assembler/batch/bunch/bundle/chunk/cluster/collector/hunk/pack/set/etc" />
-	<link rel=canonical href=https://semanticoverride.net />
+	<link rel=canonical href=https://semanticoverride.net/>
 	<meta name=theme-color content=#800 />
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<link rel=webmanifest href=/manifest.json />
 	<link rel=icon href=/imgs/favicon.svg />
-	<link rel=stylesheet href="/styles/main.css?v=0" />
+	<link rel=stylesheet href="/styles/dark-theme.css?v=0" />
+	<link rel=stylesheet href="/styles/light-theme.css?v=0" />
 	<meta property="og:url" content="https://semanticoverride.net/" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Semantic Override Network | SON" />
+	<meta property="og:title" content="Semantic Override Network" />
 	<meta property="og:description" content="Your personal news accumulator/aggregator/array/assembler/batch/bunch/bundle/chunk/cluster/collector/hunk/pack/set/etc" />
 	<meta property="og:image" content="https://semanticoverride.net/images/opengraph-cover.png?v=1" />
 	<meta property="og:image:width" content="1280" />
@@ -21,44 +21,90 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@NostraDavid2" />
 	<meta name="twitter:creator" content="@NostraDavid2" />
-	<meta name="twitter:title" content="Semantic Override Network | SON">
+	<meta name="twitter:title" content="Semantic Override Network">
 	<meta name="twitter:description" content="Your personal news accumulator/aggregator/array/assembler/batch/bunch/bundle/chunk/cluster/collector/hunk/pack/set/etc">
 	<meta name="twitter:image" content="https://semanticoverride.net/images/opengraph-cover.png?v=1">
 	<meta name="twitter:image:width" content="1280" />
 	<meta name="twitter:image:height" content="668" />
 </head>
-
 <body>
 	<header>
-		<div class=title>Semantic Override network</div>
-		<div class=subtitle>Where the <em>other</em> magic happens</div>
-	</header>
-	<nav>
-		<h5 style="display: none;">Main nav menu</h5>
-		<a href="/">Frontpage</a><span> - </span>
-		<a href=/about>About</a>
-	</nav>
+	<div class=title>Semantic Override network</div>
+	<div class=subtitle>Where the <em>other</em> magic happens</div>
+</header>
+<nav>
+	<h5 style="display: none;">Main nav menu</h5>
+	<a href="http://semanticoverride.net/" >Frontpage</a>
+	<span> - </span><a href="/about/" class="">About</a>
+	<span> - </span><a href="/" class="active">Semantic Override Network</a>
+</nav>
 	<main>
-		<h1>Semantic Override Network | SON</h1>
-		<h1>Welcome!</h1>
-		<p>[LIST OF CONTENT GOES HERE</p>
+	<template id="post">
+	<div class="post">
+		<a id="post-title-anchor"><h1 id="post-title"></h1></a>
+		<p id="post-summary"></p>
+		<hr />
+		<p id="post-top-comment"></p>
+		<a id="post-comments"> comments</a>
+		&nbsp;&mdash;&nbsp;
+		<div id="post-posted">posted: </div>
+		&nbsp;&mdash;&nbsp;
+		<div id="post-published">published: </div>
+		<ul class="post-reactions">
+			<!-- TODO: Move these to the JSON -->
+			<i name="Agree" count={getRandomNumber(25)} />
+			<i name="Artistic" count={getRandomNumber()} />
+			<i name="Disagree" count={getRandomNumber(25)} />
+			<i name="Dumb" count={getRandomNumber(2)} />
+			<i name="Friendly" count={getRandomNumber()} />
+			<i name="Funny" count={getRandomNumber(100)} />
+			<i name="Informative" count={getRandomNumber(40)} />
+			<i name="Late" count={getRandomNumber(1000)} />
+			<i name="Optimistic" count={getRandomNumber()} />
+			<i name="ProgrammingKing" count={getRandomNumber(2)} />
+			<i name="Useful" count={getRandomNumber()} />
+			<i name="Winner" count={getRandomNumber()} />
+			<i name="Zing" count={getRandomNumber(80)} />
+		</ul>
+		<ul id="post-tags"></ul>
+	</div>
+</template>
+<script>
+	fetch('/data/posts.json')
+  .then(function(response) {
+    return response.json()
+  }).then(function(json) {
+		// lets do one first
+		first = json.posts[0]
+		post = document.getElementById("post").content.cloneNode(true);
+		post.querySelector("#post-title-anchor").href = first.link
+		post.querySelector("#post-title").innerText = first.title
+		post.querySelector("#post-summary").innerText = first.summary
+		post.querySelector("#post-top-comment").innerHTML = first.topComment
+		post.querySelector("#post-posted").innerText = first.postedDate
+		post.querySelector("#post-published").innerText = first.publishedDate
+		// loop over the labels
+		//post.querySelector("#post-tags").innerText = first.publishedDate
+		main = document.querySelector("body > main")
+		main.appendChild(post)
+  })
+</script>
 	</main>
 	<footer>
-		<div class=copyright>
-			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12022</a>
-			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">12022</a>,
-			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
-			<p><sub>Last updated: <time id=updated>2022-11-20</time></sub></p>
-		</div>
-		<nav id=profiles>
-		</nav>
-		<a class=secret onclick=specialGoto(event)>π</a>
-		<script>
-			const specialGoto = event => {
-				if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
-			}
-		</script>
-	</footer>
+	<div class=copyright>
+		©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12022</a>
+		– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">12022</a>,
+		<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+		<p><sub>Last updated: <time id=updated>2022-11-20</time></sub></p>
+		<sub>home</sub>
+	</div>
+	<span></span>
+	<a class=secret onclick=secret(event)>π</a>
+	<script>
+		const secret = event => {
+			if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+		}
+	</script>
+</footer>
 </body>
-
 </html>
